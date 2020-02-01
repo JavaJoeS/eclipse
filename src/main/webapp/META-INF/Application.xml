@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="7"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_7.xsd">
+
+	<!-- <module> <service>APP-INF/Project-ds.xml</service> </module> <module> 
+		<java>mysql-connector-java-5.1.6.jar</java> </module> -->
+
+	<!-- <module> <ejb>test-ejb.jar</ejb> </module> -->
+
+	<module>
+		<web>
+			<web-uri>SEclipse.war</web-uri>
+			<context-root>/</context-root>
+		</web>
+	</module>
+
+	<library-directory>lib</library-directory>
+
+</application>

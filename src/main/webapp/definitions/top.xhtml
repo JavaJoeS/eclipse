@@ -1,0 +1,25 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<div id="top"
+		style="height: 1vh; min-width: 1350px; width: 80% vw; background-color: #7DFDFE;">
+		<p:growl id="loginStatus" showDetail="true" sticky="true" />
+
+		<p:idleMonitor timeout="6000" onidle="idleDialog.show()" />
+
+		<p:dialog header="Timeout" resizable="false" closable="false"
+			widgetVar="idleDialog" modal="true">
+			<p:panel styleClass="noborderpanel">
+				<p:panelGrid columns="1" styleClass="adressegrid">
+					<p:outputLabel value="Session has expired due to inactivity" />
+					<p:commandButton action="#{acmeAuthenticator.logout}" value="Ok" />
+				</p:panelGrid>
+			</p:panel>
+		</p:dialog>
+	</div>
+
+</ui:composition>

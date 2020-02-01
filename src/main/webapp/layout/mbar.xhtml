@@ -1,0 +1,11 @@
+<p:menubar xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<p:menuitem value="Home" update=":MainForm"
+		actionListener="#{pageProcessor.currentPage}" icon="ui-icon-home">
+		<f:attribute name="currentPage" value="MainPage" />
+	</p:menuitem>
+
+</p:menubar>

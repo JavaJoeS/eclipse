@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+
+	<persistence-unit name="icPersistenceUnit"
+		transaction-type="JTA">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<jta-data-source>java:/MariaDS</jta-data-source>
+		<!-- List of our ENTITY classes -->
+		<class>com.preliminary.InternalAccount</class>
+		<properties>
+
+			<property name="hibernate.connection.url"
+				value="jdbc:mariadb://localhost:3306/eclipseDB" />
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MariaDBDialect" />
+			<property name="hibernate.connection.username"
+				value="eclipseuser" />
+			<property name="hibernate.connection.password"
+				value="eclipseuser101" />
+			<!-- <property name="hibernate.hbm2ddl.auto" value="create"/> -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="false" />
+
+		</properties>
+	</persistence-unit>
+</persistence>

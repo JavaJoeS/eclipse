@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" -->
+<!--     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" template="layout/template.xhtml">
+
+	<ui:define name="metadata">
+		<ui:include src="definitions/meta.xhtml" />
+	</ui:define>
+	<ui:define name="head">
+		<ui:include src="definitions/header.xhtml" />
+	</ui:define>
+	<ui:define name="top">
+		<ui:include src="definitions/top.xhtml" />
+	</ui:define>
+	<ui:define name="emptyLine">
+		<ui:include id="contentHeader" src="layout/emptyLine.xhtml" />
+	</ui:define>
+	<ui:define name="content">
+		<h:form id="MainForm" enctype="multipart/form-data">
+			<p:growl id="giagrowl" showDetail="true" />
+			<ui:include src="#{pageProcessor.currentPage}" />
+		</h:form>
+	</ui:define>
+	<ui:define name="menu">
+		<h:form id="MenuForm" enctype="multipart/form-data">
+			<div
+				style="min-width: 1150px; height: 10vh; width: 100% vw; background-color: #477EB4;">
+				<br />
+				<ui:include id="menu" src="layout/mbar.xhtml" />
+			</div>
+		</h:form>
+	</ui:define>
+	<ui:define name="footer">
+		<ui:include src="definitions/footer.xhtml" />
+	</ui:define>
+</ui:composition>

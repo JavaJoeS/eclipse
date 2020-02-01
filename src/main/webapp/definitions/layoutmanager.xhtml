@@ -1,0 +1,29 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<p:layout fullPage="true" gutter="0">
+		<p:layoutUnit id="north_panel" class="ui-layout-north"
+			position="north" size="50" gutter="0">
+			<ui:insert name="north">North</ui:insert>
+		</p:layoutUnit>
+		<p:layoutUnit position="west" size="100" gutter="0">
+			<ui:insert name="left">Left</ui:insert>
+		</p:layoutUnit>
+		<p:layoutUnit position="east" size="100" gutter="0">
+			<ui:insert name="right">Right</ui:insert>
+		</p:layoutUnit>
+		<p:layoutUnit id="center" position="center" gutter="0">
+			<ui:param name="projectName" value="SEclipse" />
+			<ui:insert name="menu" />
+			<ui:insert name="content" />
+		</p:layoutUnit>
+		<p:layoutUnit position="south" size="100">
+			<ui:insert name="footer">Footer</ui:insert>
+		</p:layoutUnit>
+	</p:layout>
+
+</ui:composition>
